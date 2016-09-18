@@ -30,5 +30,8 @@
     "eslint-formatter-pretty": "^1.0.0",
     "istanbul": "^0.4.5",
     "mocha": "^3.0.2"
+  },
+  "dependencies": {
+    "restify": "^4.1.1"
   }
 }
