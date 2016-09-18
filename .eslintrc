@@ -1,0 +1,15 @@
+{
+  "root": true,
+  "extends": "google",
+  "env": {
+    "node": true,
+    "mocha": true,
+    "es6": true
+  },
+  "rules": {
+    "max-len": [
+      "error",
+      100
+    ]
+  }
+}

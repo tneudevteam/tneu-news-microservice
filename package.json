@@ -1,0 +1,34 @@
+{
+  "name": "tneu-news-microservice",
+  "version": "1.0.0",
+  "description": "Microservice for TNEU news",
+  "main": "index.js",
+  "scripts": {
+    "coverage": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha 'test/**/*.test.js'",
+    "lint": "eslint . --fix --format=node_modules/eslint-formatter-pretty",
+    "test": "./node_modules/mocha/bin/mocha 'test/**/*.test.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/vladgolubev/tneu-news-microservice.git"
+  },
+  "keywords": [
+    "tneu",
+    "news",
+    "microservice"
+  ],
+  "author": "Vlad Holubiev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vladgolubev/tneu-news-microservice/issues"
+  },
+  "homepage": "https://github.com/vladgolubev/tneu-news-microservice#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.5.0",
+    "eslint-config-google": "^0.6.0",
+    "eslint-formatter-pretty": "^1.0.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.0.2"
+  }
+}
