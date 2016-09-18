@@ -3,7 +3,6 @@ node_js:
   - '6'
   - '4'
 script: 'npm test'
-after_script: 'npm install coveralls && npm run coverage && cat ./coverage/lcov.info | coveralls'
 notifications:
   email:
     on_failure: always
