@@ -1,5 +1,9 @@
 const restify = require('restify');
-const server = restify.createServer();
+const log = require('./lib/log');
+const server = restify.createServer({
+  name: 'news-microservice',
+  log
+});
 
 const snippetsHandler = require('./lib/handlers/snippets');
 const articleHandler = require('./lib/handlers/article');
@@ -17,5 +21,5 @@ server.get('/snippets/:page?', snippetsHandler);
 server.get('/article', articleHandler);
 
 server.listen(9191, () => {
-  console.log('%s listening at %s', server.name, server.url);
+  log.info('%s has been started at %s', server.name, server.url);
 });
