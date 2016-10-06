@@ -6,7 +6,7 @@
   "scripts": {
     "coverage": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha 'test/**/*.test.js'",
     "lint": "eslint . --fix --format=node_modules/eslint-formatter-pretty",
-    "start": "node --expose-gc index.js",
+    "start": "pm2 start --no-daemon index.js",
     "test": "./node_modules/mocha/bin/mocha 'test/**/*.test.js'"
   },
   "repository": {
@@ -34,6 +34,7 @@
   },
   "dependencies": {
     "bunyan-winston-adapter": "^0.2.0",
+    "pm2": "^2.0.18",
     "restify": "^4.1.1",
     "tneu-news": "^1.0.1",
     "winston": "^2.2.0",
