@@ -2,7 +2,7 @@
 
 ## API
 
-### /snippets?limit={Number}&since={ISODateString}
+### /snippets?limit={Number}&skip={Number}&since={ISODateString}
 
 Example response:
 
