@@ -2,9 +2,7 @@
 
 ## API
 
-### /snippets/:page
-
-Get news snippets by page number (optional).
+### /snippets?limit={Number}&since={ISODateString}
 
 Example response:
 
@@ -54,8 +52,13 @@ $ docker build -t news-microservice .
 
 #### Run
 
+Make sure you have mongodb instance running.
+
 ```
-$ docker run -d -p 9191:9191 news-microservice
+$ docker run -d \
+  -p 9191:9191 \
+  -e MONGO_URL="mongodb://user:pass@host:port/db" \
+  news-microservice
 ```
 
 Optionally you can provide `LOG_HOST` and `LOG_PORT` to redirect logs to remote destination.
@@ -65,6 +68,7 @@ $ docker run -d \
   -p 9191:9191 \
   -e LOG_HOST="" \
   -e LOG_PORT="" \
+  -e MONGO_URL="mongodb://user:pass@host:port/db" \
   news-microservice
 ```
 
