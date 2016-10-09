@@ -15,6 +15,7 @@ server.use(restify.throttle({
   rate: 3,
   ip: true
 }));
+server.use(restify.CORS());
 
 server.get('/snippets-update', snippetsUpdateHandler);
 server.get('/snippets', snippetsHandler);
