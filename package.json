@@ -38,6 +38,7 @@
     "bluebird": "^3.4.6",
     "bunyan-winston-adapter": "^0.2.0",
     "cron": "^1.1.1",
+    "jsonic": "^0.2.2",
     "lodash": "^4.16.4",
     "mongodb": "^2.2.10",
     "pm2": "^2.0.18",
