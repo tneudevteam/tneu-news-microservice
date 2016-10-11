@@ -4,6 +4,12 @@
 
 ### /snippets?limit={Number}&skip={Number}&since={ISODateString}
 
+Example requests:
+
+* `/snippets`
+* `/snippets?limit=20&skip=0&since=2016-10-10`
+* `/snippets?limit=20&skip=0&since=2016-10-10T12:00:00Z`
+
 Example response:
 
 ```javascript
@@ -18,6 +24,11 @@ Example response:
   }, {/* 14 more... */}
 ]
 ```
+
+### /fake-snippets?since={ISODateString}
+
+For development purposes. Will return 1-5 random news with date
+between today and passed in `since`.
 
 ### /article?link=url
 

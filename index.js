@@ -6,6 +6,7 @@ const server = restify.createServer({name: 'news-microservice', log});
 
 const snippetsUpdateHandler = require('./lib/handlers/snippets-update');
 const snippetsHandler = require('./lib/handlers/snippets');
+const fakeSnippetsHandler = require('./lib/handlers/fake-snippets');
 const articleHandler = require('./lib/handlers/article');
 
 server.pre(restify.pre.userAgentConnection());
@@ -19,6 +20,7 @@ server.use(restify.CORS());
 
 server.get('/snippets-update', snippetsUpdateHandler);
 server.get('/snippets', snippetsHandler);
+server.get('/fake-snippets', fakeSnippetsHandler);
 server.get('/article', articleHandler);
 
 server.listen(9191, () => {
